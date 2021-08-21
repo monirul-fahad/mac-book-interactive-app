@@ -34,6 +34,23 @@ function updateDeliveryCost(delivery){
     }
 };
 
+// total price calculation function
+function totalPrice(){
+    const bestPrice = parseInt(document.getElementById('best-cost').innerText);
+    const memoryCost = parseInt(document.getElementById('memory-cost').innerText);
+    const storageCost = parseInt(document.getElementById('storage-cost').innerText);
+    const deliveryCost = parseInt(document.getElementById('delivery-cost').innerText);
+
+    //add all cost
+    const updatedTotalPrice = bestPrice + memoryCost + storageCost + deliveryCost;
+
+    //selecting both total price id and setting them updatedTotalPrice  
+    const totalPrice = document.getElementById('total-price')
+    totalPrice.innerText = updatedTotalPrice;
+    const finalPrice = document.getElementById('final-price')
+    finalPrice.innerText = updatedTotalPrice;
+}
+
 // update  memory cost 
 document.getElementById('memory-btn-8gb').addEventListener('click', function(){
     updateMemoryCost('8gb')
@@ -68,22 +85,6 @@ document.getElementById('charged-delivery').addEventListener('click', function()
     totalPrice()
 })
 
-// total price calculation function
-function totalPrice(){
-    const bestPrice = parseInt(document.getElementById('best-price').innerText);
-    const memoryCost = parseInt(document.getElementById('memory-cost').innerText);
-    const storageCost = parseInt(document.getElementById('storage-cost').innerText);
-    const deliveryCost = parseInt(document.getElementById('delivery-cost').innerText);
-
-    //add all cost
-    const updatedTotalPrice = bestPrice + memoryCost + storageCost + deliveryCost;
-
-    //selecting both total price element and setting the updatedTotalPrice value in them.     
-    const totalPrice = document.getElementById('total-price')
-    totalPrice.innerText = updatedTotalPrice;
-    const finalPrice = document.getElementById('final-price')
-    finalPrice.innerText = updatedTotalPrice;
-}
 
 // Promo Code Discount function
 document.getElementById('promocode-btn').addEventListener('click', function(){
