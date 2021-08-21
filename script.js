@@ -1,3 +1,12 @@
+//global button variebles 
+const mamoryBtn1 = document.getElementById('memory-btn-8gb')
+const mamoryBtn2 = document.getElementById('memory-btn-16gb')
+const storageBtn1 = document.getElementById('storage-btn-256gb')
+const storageBtn2 = document.getElementById('storage-btn-512gb')
+const storageBtn3 = document.getElementById('storage-btn-1tb')
+const freeDelivery = document.getElementById('free-delivery')
+const chargedDelivery = document.getElementById('charged-delivery')
+
 // memory cost function
 function updateMemoryCost(memoryCard){
     const memoryCost = document.getElementById('memory-cost');
@@ -23,26 +32,26 @@ function updateStorageCost(storage){
     }
 };
 
-//delivey cost funtion 
+//delivery cost funtion 
 function updateDeliveryCost(delivery){
-    const deliveyCost = document.getElementById('delivery-cost')
+    const deliveryCost = document.getElementById('delivery-cost')
     if(delivery == 'free'){
-        deliveyCost.innerText = 0;
+        deliveryCost.innerText = 0;
     }
     else if(delivery == 'charged'){
-        deliveyCost.innerText = 20;
+        deliveryCost.innerText = 20;
     }
 };
 
 // total price calculation function
 function totalPrice(){
     const bestPrice = parseInt(document.getElementById('best-cost').innerText);
-    const memoryCost = parseInt(document.getElementById('memory-cost').innerText);
-    const storageCost = parseInt(document.getElementById('storage-cost').innerText);
-    const deliveryCost = parseInt(document.getElementById('delivery-cost').innerText);
+    const memoryPrice = parseInt(document.getElementById('memory-cost').innerText);
+    const storagePrice = parseInt(document.getElementById('storage-cost').innerText);
+    const deliveryPrice = parseInt(document.getElementById('delivery-cost').innerText);
 
     //add all cost
-    const updatedTotalPrice = bestPrice + memoryCost + storageCost + deliveryCost;
+    const updatedTotalPrice = bestPrice + memoryPrice + storagePrice + deliveryPrice;
 
     //selecting both total price id and setting them updatedTotalPrice  
     const totalPrice = document.getElementById('total-price')
@@ -51,36 +60,37 @@ function totalPrice(){
     finalPrice.innerText = updatedTotalPrice;
 }
 
+
 // update  memory cost 
-document.getElementById('memory-btn-8gb').addEventListener('click', function(){
+mamoryBtn1.addEventListener('click', function(){
     updateMemoryCost('8gb')
     totalPrice()
 });
-document.getElementById('memory-btn-16gb').addEventListener('click', function(){
+mamoryBtn2.addEventListener('click', function(){
     updateMemoryCost('16gb')
     totalPrice()
 });
 
 // update storage cost
-document.getElementById('storage-btn-256gb').addEventListener('click', function(){
+storageBtn1.addEventListener('click', function(){
     updateStorageCost('256gb')
     totalPrice()
 });
-document.getElementById('storage-btn-512gb').addEventListener('click', function(){
+storageBtn2.addEventListener('click', function(){
     updateStorageCost('512gb')
     totalPrice()
 });
-document.getElementById('storage-btn-1tb').addEventListener('click', function(){
+storageBtn3.addEventListener('click', function(){
     updateStorageCost('1tb')
     totalPrice()
 });
 
 // update Delivery Cost
-document.getElementById('free-delivery').addEventListener('click', function(){
+freeDelivery.addEventListener('click', function(){
     updateDeliveryCost('free')
     totalPrice()
 })
-document.getElementById('charged-delivery').addEventListener('click', function(){
+chargedDelivery.addEventListener('click', function(){
     updateDeliveryCost('charged')
     totalPrice()
 })
