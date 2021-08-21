@@ -3,8 +3,8 @@ function updateMemoryCost(memoryCard){
     const memoryCostText = document.getElementById('memory-cost');
     if(memoryCard == '8gb'){
         memoryCostText.innerText = parseInt(0)
-
-    } else if (memoryCard == '16gb') {
+    }
+    else if (memoryCard == '16gb') {
         memoryCostText.innerText = parseInt(180)
     }
 };
