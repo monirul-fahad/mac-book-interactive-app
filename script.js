@@ -1,11 +1,11 @@
 // memory cost function
 function updateMemoryCost(memoryCard){
-    const memoryCostText = document.getElementById('memory-cost');
+    const memoryCost = document.getElementById('memory-cost');
     if(memoryCard == '8gb'){
-        memoryCostText.innerText = parseInt(0)
+        memoryCost.innerText = 0;
     }
     else if (memoryCard == '16gb') {
-        memoryCostText.innerText = parseInt(180)
+        memoryCost.innerText = 180;
     }
 };
 
@@ -13,13 +13,13 @@ function updateMemoryCost(memoryCard){
 function updateStorageCost(storage){
     const storageCost = document.getElementById('storage-cost');
     if(storage == '256gb'){
-        storageCost.innerText = parseInt(0);
+        storageCost.innerText = 0;
     }
     else if(storage == '512gb'){
-        storageCost.innerText = parseInt(100);
+        storageCost.innerText = 100;
     }
     else if(storage == '1tb'){
-        storageCost.innerText = parseInt(180);
+        storageCost.innerText = 180;
     }
 };
 
@@ -27,10 +27,10 @@ function updateStorageCost(storage){
 function updateDeliveryCost(delivery){
     const deliveyCost = document.getElementById('delivery-cost')
     if(delivery == 'free'){
-        deliveyCost.innerText = parseInt(0)
+        deliveyCost.innerText = 0;
     }
     else if(delivery == 'charged'){
-        deliveyCost.innerText = parseInt(20)
+        deliveyCost.innerText = 20;
     }
 };
 
