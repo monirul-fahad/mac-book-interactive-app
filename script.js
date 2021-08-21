@@ -98,9 +98,8 @@ chargedDelivery.addEventListener('click', function(){
 
 // Promo Code Discount function
 document.getElementById('promocode-btn').addEventListener('click', function(){
-    let finalPrice = document.getElementById('final-price');
-    let promoCodeInput = document.getElementById('promocode-input');
-    console.log(promoCodeInput.value)
+    const finalPrice = document.getElementById('final-price');
+    const promoCodeInput = document.getElementById('promocode-input');
     if( promoCodeInput.value == 'stevekaku'){
         const percent = finalPrice.innerText * 0.2;
         const priceAfterDiscount = finalPrice.innerText - percent;
@@ -109,5 +108,5 @@ document.getElementById('promocode-btn').addEventListener('click', function(){
         alert("Your Promo Code Isn't Valid")
     }
     
-    promoCodeInput.value = ''
+    promoCodeInput.value = '';
 })
