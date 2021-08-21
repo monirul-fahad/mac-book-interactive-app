@@ -70,14 +70,10 @@ document.getElementById('charged-delivery').addEventListener('click', function()
 
 // total price calculation function
 function totalPrice(){
-    const bestPriceStr = document.getElementById('best-price').innerText;
-    const bestPrice = parseInt(bestPriceStr);
-    const memoryCostStr = document.getElementById('memory-cost').innerText;
-    const memoryCost = parseInt(memoryCostStr);
-    const storageCostStr = document.getElementById('storage-cost').innerText;
-    const storageCost = parseInt(storageCostStr);
-    const deliveryCostStr = document.getElementById('delivery-cost').innerText;
-    const deliveryCost = parseInt(deliveryCostStr);
+    const bestPrice = parseInt(document.getElementById('best-price').innerText);
+    const memoryCost = parseInt(document.getElementById('memory-cost').innerText);
+    const storageCost = parseInt(document.getElementById('storage-cost').innerText);
+    const deliveryCost = parseInt(document.getElementById('delivery-cost').innerText);
 
     //add all cost
     const updatedTotalPrice = bestPrice + memoryCost + storageCost + deliveryCost;
