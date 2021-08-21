@@ -68,7 +68,7 @@ document.getElementById('charged-delivery').addEventListener('click', function()
     totalPrice()
 })
 
-// total price calculation 
+// total price calculation function
 function totalPrice(){
     const bestPriceStr = document.getElementById('best-price').innerText;
     const bestPrice = parseInt(bestPriceStr);
@@ -79,14 +79,14 @@ function totalPrice(){
     const deliveryCostStr = document.getElementById('delivery-cost').innerText;
     const deliveryCost = parseInt(deliveryCostStr);
 
-//add all cost
-    const currentTotalPrice = bestPrice + memoryCost + storageCost + deliveryCost;
+    //add all cost
+    const updatedTotalPrice = bestPrice + memoryCost + storageCost + deliveryCost;
 
-//selecting both total price element and setting the currentTotalPrice value in them.     
+    //selecting both total price element and setting the updatedTotalPrice value in them.     
     const totalPrice = document.getElementById('total-price')
-    totalPrice.innerText = currentTotalPrice;
+    totalPrice.innerText = updatedTotalPrice;
     const finalPrice = document.getElementById('final-price')
-    finalPrice.innerText = currentTotalPrice;
+    finalPrice.innerText = updatedTotalPrice;
 }
 
 // Promo Code Discount function

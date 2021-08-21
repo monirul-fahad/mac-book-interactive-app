@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mac Book Pro</title>
+    <!-- bootstrap cdn link  -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,25 +15,23 @@
   </head>
   <body>
     <main class="container pt-4">
-      <div class="row g-5">
+      <section class="row g-5">
         <div class="col-6">
           <img class="img-fluid" src="./image/mac.png" alt="" />
         </div>
         <div class="col-6">
-          <header>
+          <article>
             <h1>
-              Customze your blue 24-inch <br />
+              Customize your blue 24-inch <br />
               iMac with Apple M1 chip.
             </h1>
             <p class="fs-5">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Excepturi eligendi animi quaerat eaque dolorem dolores
-              exercitationem sequi porro voluptas, delectus quo, impedit hic
-              quibusdam suscipit maiores voluptates repellat explicabo
-              consequuntur id recusandae, nihil quasi. Voluptatum fugit nobis et
-              illum quos!
+              Apple M1 chip with 8-core CPU with 4 performance cores and 4
+              efficiency cores, 7-core GPU, and 16-core Neural Engine 8GB
+              unified memory 256GB SSD storage Two Thunderbolt/USB 4 ports Magic
+              Mouse Magic Keyboard - US English.
             </p>
-          </header>
+          </article>
 
           <div class="pt-4">
             <h3>Memory</h3>
@@ -112,6 +111,7 @@
               </button>
             </div>
           </div>
+
           <div class="w-50 p-4">
             <table class="table">
               <tbody>
@@ -162,13 +162,14 @@
             </div>
           </div>
         </div>
-      </div>
-      <!-- total section  -->
+      </section>
+      <!-- total price after discount calculation section  -->
       <section class="pb-5">
         <hr />
         <h2 class="text-center">Total: $<span id="final-price">1299</span></h2>
       </section>
     </main>
+    <!-- javascript file link  -->
     <script src="./script.js"></script>
   </body>
 </html>
