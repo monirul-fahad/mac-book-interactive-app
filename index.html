@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mac Book Pro</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="container pt-4">
+      <div class="row g-5">
+        <div class="col-6">
+          <img class="img-fluid" src="./image/mac.png" alt="" />
+        </div>
+        <div class="col-6">
+          <header>
+            <h1>
+              Customze your blue 24-inch <br />
+              iMac with Apple M1 chip.
+            </h1>
+            <p class="fs-5">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Excepturi eligendi animi quaerat eaque dolorem dolores
+              exercitationem sequi porro voluptas, delectus quo, impedit hic
+              quibusdam suscipit maiores voluptates repellat explicabo
+              consequuntur id recusandae, nihil quasi. Voluptatum fugit nobis et
+              illum quos!
+            </p>
+          </header>
+
+          <div class="pt-4">
+            <h3>Memory</h3>
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Basic outlined example"
+            >
+              <button
+                id="memory-btn-8gb"
+                type="button"
+                class="btn btn-outline-primary"
+              >
+                8GB unified memory
+              </button>
+              <button
+                id="memory-btn-16gb"
+                type="button"
+                class="btn btn-outline-primary"
+              >
+                16GB unified memory
+              </button>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <h3>Storage</h3>
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Basic outlined example"
+            >
+              <button
+                id="storage-btn-256gb"
+                type="button"
+                class="btn btn-outline-primary"
+              >
+                256GB SSD storage
+              </button>
+              <button
+                id="storage-btn-512gb"
+                type="button"
+                class="btn btn-outline-primary"
+              >
+                512GB SSD storage
+              </button>
+              <button
+                id="storage-btn-1tb"
+                type="button"
+                class="btn btn-outline-primary"
+              >
+                1TB SSD storage
+              </button>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <h3>choose your delivery option</h3>
+            <div
+              class="btn-group"
+              role="group"
+              aria-label="Basic outlined example"
+            >
+              <button
+                id="free-delivery"
+                type="button"
+                class="btn btn-outline-primary"
+              >
+                Friday, Aug-25 Free Prime Delivery
+              </button>
+              <button
+                id="charged-delivery"
+                type="button"
+                class="btn btn-outline-primary"
+              >
+                Friday, Aug-21 Delivery Charge 20$
+              </button>
+            </div>
+          </div>
+          <div class="w-50 p-4">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th scope="row">Best Price</th>
+                  <td class="fw-bold">$<span id="best-price">1299</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Extra memory cost</th>
+                  <td class="fw-bold">$<span id="memory-cost">0</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Extra storage cost</th>
+                  <td class="fw-bold">$<span id="storage-cost">0</span></td>
+                </tr>
+                <tr class="border-bottom border-dark">
+                  <th scope="row">Delivery charge</th>
+                  <td class="fw-bold">$<span id="delivery-cost">0</span></td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Total Price</th>
+                  <td class="fw-bold">$<span id="total-price">1299</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <div>
+              <p class="mb-0">Add promo code</p>
+              <div class="row">
+                <div class="col-8">
+                  <input
+                    id="promocode-input"
+                    type="text"
+                    class="form-control"
+                    placeholder=""
+                  />
+                </div>
+                <div class="col-4">
+                  <button
+                    id="promocode-btn"
+                    type="submit"
+                    class="btn btn-danger mb-3"
+                  >
+                    Apply
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- total section  -->
+      <section class="pb-5">
+        <hr />
+        <h2 class="text-center">Total: $<span id="final-price">1299</span></h2>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
